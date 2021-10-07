@@ -40,7 +40,7 @@ export default function Example() {
                   <div className="flex-shrink-0">
                     <img
                       className="h-8 w-8"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                      src={ProfileImage}
                       alt="Workflow"
                     />
                   </div>
@@ -192,7 +192,7 @@ export default function Example() {
 
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Zero Note</h1>
         </div>
       </header>
       <main>

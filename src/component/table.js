@@ -1,5 +1,5 @@
 import react from "react";
-import Hero from "../dataJSON/hero.js";
+import Hero from "../dataJSON/hero.json";
 
 class LastList extends react.Component {
   constructor(props) {
