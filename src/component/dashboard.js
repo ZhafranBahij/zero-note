@@ -5,6 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Table from "./table.js";
 import ProfileImage from "../img/Shizuku.jpg";
 import AddForm from "./addForm.js";
+import Hero from "../dataJSON/hero.js";
 
 const user = {
   name: "Rainfog",
@@ -28,7 +29,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+const Dashboard = () => {
   return (
     <div>
       <Disclosure as="nav" className="bg-gray-800">
@@ -205,4 +206,6 @@ export default function Example() {
       </main>
     </div>
   );
-}
+};
+
+export default Dashboard;
