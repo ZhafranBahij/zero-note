@@ -1,8 +1,22 @@
 import react from "react";
-import hero from "../dataJSON/hero.js";
-import Table from "./table.js";
 
-const AddForm = () => {
+const AddForm = (props) => {
+  const [hero, setHero] = react.useState({
+    name: "",
+    skill: "",
+    role: "Admin",
+  });
+
+  const handleChange = (event) => {
+    setHero({ ...hero, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.addHero(hero);
+    console.log(hero);
+  };
+
   return (
     <div className="my-14">
       <div className="mt-10 sm:mt-0">
@@ -18,7 +32,7 @@ const AddForm = () => {
             </div>
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="shadow overflow-hidden sm:rounded-md">
                 <div className="px-4 py-5 bg-white sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -34,6 +48,7 @@ const AddForm = () => {
                         name="name"
                         id="name"
                         autoComplete="given-name"
+                        onChange={handleChange}
                         className="mt-1 focus:ring-gray-800  focus:border-gray-800  block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -50,6 +65,7 @@ const AddForm = () => {
                         name="skill"
                         id="skill"
                         autoComplete="family-name"
+                        onChange={handleChange}
                         className="mt-1 focus:ring-gray-800 focus:border-gray-800  block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -65,6 +81,7 @@ const AddForm = () => {
                         id="role"
                         name="role"
                         autoComplete="role"
+                        onChange={handleChange}
                         className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-gray-800  sm:text-sm"
                       >
                         <option value="Admin">Admin</option>

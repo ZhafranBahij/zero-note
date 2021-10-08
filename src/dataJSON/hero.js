@@ -9,6 +9,11 @@ const Hero = [
     skill: "Mighty Slasher",
     role: "Admin",
   },
+  {
+    name: "Suzaku Mibu",
+    skill: "Rain Arrow",
+    role: "Spellcaster",
+  },
 ];
 
 export default Hero;

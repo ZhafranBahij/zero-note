@@ -1,6 +1,4 @@
-import Hero from "../dataJSON/hero.js";
-
-const LastList = () => {
+const LastList = (props) => {
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -39,7 +37,7 @@ const LastList = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {Hero.map((person) => (
+                {props.heroes.map((person) => (
                   <tr key={person.name}>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">

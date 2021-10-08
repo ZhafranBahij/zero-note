@@ -6,6 +6,7 @@ import Table from "./table.js";
 import ProfileImage from "../img/Shizuku.jpg";
 import AddForm from "./addForm.js";
 import Hero from "../dataJSON/hero.js";
+import react from "react";
 
 const user = {
   name: "Rainfog",
@@ -30,6 +31,13 @@ function classNames(...classes) {
 }
 
 const Dashboard = () => {
+  const usersData = Hero;
+
+  const [heroes, setHeroes] = react.useState(usersData);
+  const addHeroes = (hero) => {
+    setHeroes([...heroes, hero]);
+  };
+
   return (
     <div>
       <Disclosure as="nav" className="bg-gray-800">
@@ -199,8 +207,8 @@ const Dashboard = () => {
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Replace with your content */}
-          <AddForm />
-          <Table />
+          <AddForm addHero={addHeroes} />
+          <Table heroes={heroes} />
           {/* /End replace */}
         </div>
       </main>
