@@ -31,12 +31,31 @@ function classNames(...classes) {
 }
 
 const Dashboard = () => {
+  // Create a data called 'hero'
   const usersData = Hero;
-
   const [heroes, setHeroes] = react.useState(usersData);
+
+  //Event for add hero
   const addHeroes = (hero) => {
     setHeroes([...heroes, hero]);
   };
+
+  //Event for delete hero
+  const delHeroes = (name) => {
+    setHeroes(heroes.filter((hero) => hero.name !== name));
+  };
+
+  //Event for edit hero
+  const editHeroes = (name) => {
+    console.log(name);
+    // setHeroes(heroes.filter((hero) => hero.name !== name));
+  };
+
+  const [initHero, setInitHero] = react.useState({
+    name: "",
+    skill: "",
+    role: "Admin",
+  });
 
   return (
     <div>
@@ -207,8 +226,8 @@ const Dashboard = () => {
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Replace with your content */}
-          <AddForm addHero={addHeroes} />
-          <Table heroes={heroes} />
+          <AddForm addHero={addHeroes} initHero={initHero} />
+          <Table delHero={delHeroes} editHeroes={editHeroes} heroes={heroes} />
           {/* /End replace */}
         </div>
       </main>
