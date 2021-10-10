@@ -40,22 +40,22 @@ const Dashboard = () => {
     setHeroes([...heroes, hero]);
   };
 
-  const [initHero, setInitHero] = react.useState({
-    name: "Rainy",
-    skill: "",
-    role: "Admin",
-  });
-
   //Event for delete hero
-  const delHeroes = (currname, currskill = "", currrole = "Admin") => {
-    setHeroes(heroes.filter((hero) => hero.name !== currname));
-    console.log(currskill);
-    if (currskill !== "") {
-      setInitHero({ name: currname, skill: currskill, role: currrole });
-    }
+  const delHeroes = (name) => {
+    setHeroes(heroes.filter((hero) => hero.name !== name));
   };
 
   //Event for edit hero
+  const editHeroes = (name) => {
+    console.log(name);
+    // setHeroes(heroes.filter((hero) => hero.name !== name));
+  };
+
+  const [initHero, setInitHero] = react.useState({
+    name: "",
+    skill: "",
+    role: "Admin",
+  });
 
   return (
     <div>
@@ -227,7 +227,7 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Replace with your content */}
           <AddForm addHero={addHeroes} initHero={initHero} />
-          <Table delHero={delHeroes} heroes={heroes} />
+          <Table delHero={delHeroes} editHeroes={editHeroes} heroes={heroes} />
           {/* /End replace */}
         </div>
       </main>

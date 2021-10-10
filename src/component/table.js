@@ -62,7 +62,7 @@ const Tbody = (props) => {
           <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
             <button
               onClick={() => {
-                props.delHero(person.name, person.skill, person.role);
+                props.editHeroes(person.name);
               }}
               className="px-4 py-2 mr-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
             >
