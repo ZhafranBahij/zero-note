@@ -45,11 +45,7 @@ const Dashboard = () => {
     setHeroes(heroes.filter((hero) => hero.name !== name));
   };
 
-  //Event for edit hero
-  const editHeroes = (name) => {
-    console.log(name);
-    // setHeroes(heroes.filter((hero) => hero.name !== name));
-  };
+  editHeroes.react.bind();
 
   const [initHero, setInitHero] = react.useState({
     name: "",
@@ -227,7 +223,7 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Replace with your content */}
           <AddForm addHero={addHeroes} initHero={initHero} />
-          <Table delHero={delHeroes} editHeroes={editHeroes} heroes={heroes} />
+          <Table delHero={delHeroes} heroes={heroes} />
           {/* /End replace */}
         </div>
       </main>
