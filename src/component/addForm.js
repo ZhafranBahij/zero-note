@@ -1,16 +1,19 @@
 import react from "react";
 
 const AddForm = (props) => {
+  // First setting to do. Hero was a object so i use this.
   const [hero, setHero] = react.useState({
-    name: "",
-    skill: "",
-    role: "Admin",
+    name: props.initHero.name,
+    skill: props.initHero.skill,
+    role: props.initHero.role,
   });
 
+  // If a form was typed
   const handleChange = (event) => {
     setHero({ ...hero, [event.target.name]: event.target.value });
   };
 
+  // If clicked a submit
   const handleSubmit = (event) => {
     event.preventDefault();
     props.addHero(hero);
@@ -49,6 +52,7 @@ const AddForm = (props) => {
                         id="name"
                         autoComplete="given-name"
                         onChange={handleChange}
+                        value={hero.name}
                         className="mt-1 focus:ring-gray-800  focus:border-gray-800  block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -66,6 +70,7 @@ const AddForm = (props) => {
                         id="skill"
                         autoComplete="family-name"
                         onChange={handleChange}
+                        value={hero.skill}
                         className="mt-1 focus:ring-gray-800 focus:border-gray-800  block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
