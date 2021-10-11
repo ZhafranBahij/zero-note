@@ -62,6 +62,14 @@ const Tbody = (props) => {
           <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
             <button
               onClick={() => {
+                props.editHero(person.name, person.skill, person.role);
+              }}
+              className="px-4 py-2 mx-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
                 props.delHero(person.name);
               }}
               className="px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
@@ -83,7 +91,11 @@ const LastList = (props) => {
           <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <Thead />
-              <Tbody heroes={props.heroes} delHero={props.delHero} />
+              <Tbody
+                heroes={props.heroes}
+                delHero={props.delHero}
+                editHero={props.editHero}
+              />
             </table>
           </div>
         </div>

@@ -8,6 +8,14 @@ const AddForm = (props) => {
     role: props.initHero.role,
   });
 
+  react.useEffect(() => {
+    setHero({
+      name: props.initHero.name,
+      skill: props.initHero.skill,
+      role: props.initHero.role,
+    });
+  }, [props]);
+
   // If a form was typed
   const handleChange = (event) => {
     setHero({ ...hero, [event.target.name]: event.target.value });
