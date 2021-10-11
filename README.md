@@ -1,6 +1,6 @@
 # Zero-Note
 
-Well, i create this app with react and tailwind. If you want to see, (check this)[].
+Well, i create this app with react and tailwind. If you want to see, [check this](https://zhafranbahij.github.io/zero-note/).
 
 ## Some Technical that i need in the future
 
@@ -10,7 +10,7 @@ It's just a documentary to do something that i take long time to finished this p
 
 create global.d.ts in the rood of directory and add in this declare module "@tailwindcss/forms";
 I remove a purge in package.json
-The rest i just took it from (tutorial)[https://www.npmjs.com/package/@tailwindcss/forms]
+The rest i just took it from [tutorial](https://www.npmjs.com/package/@tailwindcss/forms)
 
 ### Use a state from hook
 
@@ -21,5 +21,21 @@ It's just a example. If i create a object called "HERO" and the location of this
 
 ### Edit and Update
 
-In dashboard.js, set some property from the object to exchange. After that, erase the object. Then, the value in erased object can be in form.
-In addForm.js, if the value want to in the form. Do this. Create useEffect, then use a set to object, after that fill the argumen two in useEffect with [props]
+In dashboard.js on editHeroes function
+
+> const editHeroes = (currentname, currentskill, currentrole) => {
+> initHero.name = currentname;
+> initHero.skill = currentskill;
+> initHero.role = currentrole;
+> setHeroes(heroes.filter((hero) => hero.name !== currentname));
+> };
+
+In addForm.js
+
+> react.useEffect(() => {
+> setHero({
+> name: props.initHero.name,
+> skill: props.initHero.skill,
+> role: props.initHero.role,
+> });
+> }, [props]);
