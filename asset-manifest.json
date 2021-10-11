@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/zero-note/static/css/main.1877028d.chunk.css",
+    "main.js": "/zero-note/static/js/main.fceedcc4.chunk.js",
+    "main.js.map": "/zero-note/static/js/main.fceedcc4.chunk.js.map",
+    "runtime-main.js": "/zero-note/static/js/runtime-main.d3001435.js",
+    "runtime-main.js.map": "/zero-note/static/js/runtime-main.d3001435.js.map",
+    "static/js/2.b730465d.chunk.js": "/zero-note/static/js/2.b730465d.chunk.js",
+    "static/js/2.b730465d.chunk.js.map": "/zero-note/static/js/2.b730465d.chunk.js.map",
+    "static/js/3.79f777e3.chunk.js": "/zero-note/static/js/3.79f777e3.chunk.js",
+    "static/js/3.79f777e3.chunk.js.map": "/zero-note/static/js/3.79f777e3.chunk.js.map",
+    "index.html": "/zero-note/index.html",
+    "static/css/main.1877028d.chunk.css.map": "/zero-note/static/css/main.1877028d.chunk.css.map",
+    "static/js/2.b730465d.chunk.js.LICENSE.txt": "/zero-note/static/js/2.b730465d.chunk.js.LICENSE.txt",
+    "static/media/Shizuku.f3e6dbac.jpg": "/zero-note/static/media/Shizuku.f3e6dbac.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3001435.js",
+    "static/js/2.b730465d.chunk.js",
+    "static/css/main.1877028d.chunk.css",
+    "static/js/main.fceedcc4.chunk.js"
+  ]
+}
